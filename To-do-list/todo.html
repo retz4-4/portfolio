@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TrainLog — Your Daily Grind</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+<div class="logo">Train<span>Log</span></div>
+<div class="date-chip" id="dateChip"></div>
+</header>
+
+<div class="progress-area">
+<div class="progress-meta">
+<span class="progress-label">Today's Progress</span>
+<span class="progress-count" id="progressCount">0/0</span>
+</div>
+<div class="progress-track">
+<div class="progress-fill" id="progressFill"></div>
+</div>
+</div>
+
+<main>
+<div class="tabs" id="tabs">
+<button class="tab active" data-cat="All">All</button>
+<button class="tab" data-cat="Workout">💪 Workout</button>
+<button class="tab" data-cat="Nutrition">🥗 Nutrition</button>
+<button class="tab" data-cat="Recovery">🛌 Recovery</button>
+<button class="tab" data-cat="Goals">🎯 Goals</button>
+</div>
+
+<div class="add-area">
+<div class="input-wrap">
+<input class="task-input" id="taskInput" type="text" placeholder="Add a training task…" />
+</div>
+<select class="priority-select" id="prioritySelect">
+<option value="high">🔴 High</option>
+<option value="medium" selected>🟡 Medium</option>
+<option value="low">🔵 Low</option>
+</select>
+<button class="add-btn" id="addBtn">+ Add</button>
+</div>
+
+<div id="taskContainer"></div>
+</main>
+<script src="script.js"></script>
+</body>
+</html>

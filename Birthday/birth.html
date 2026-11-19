@@ -1,0 +1,62 @@
+<html>
+	<head>
+	<link rel="stylesheet" href="style.css">
+	<title>Happy Birtday</title>
+	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Nunito&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<div class="container">
+  <div class="left">
+    <h1>Happy Birthday!<mark>Anna</mark></h1>
+    <p>Happy <mark>20 years</mark><br>
+		I hope you achieve all your goals<br>
+		and always be healthy.</p>
+		<p id="musicText">Click anywhere for music</p>
+	<button id="musicBtn">Stop Music</button>
+  </div>
+  <div class="right">
+    <img src="images/cake.gif" alt="birthday gif">
+  </div>
+</div>
+	
+	
+<audio id="mySong" src="music.mp3" loop></audio>
+
+
+
+<script>
+  document.addEventListener('click', function() {
+    document.getElementById('mySong').play();
+    document.getElementById('musicText').style.display = 'none';
+  }, { once: true });
+</script>
+
+<canvas id="confettiCanvas"></canvas>
+
+	
+	<script>
+  const song = document.getElementById('mySong');
+  const musicText = document.getElementById('musicText');
+  const musicBtn = document.getElementById('musicBtn');
+
+  // play on first click anywhere
+  document.addEventListener('click', function () {
+    song.play();
+    musicText.style.display = 'none';
+  }, { once: true });
+
+  // toggle button
+  musicBtn.addEventListener('click', function () {
+    if (song.paused) {
+      song.play();
+      musicBtn.textContent = "Stop Music";
+    } else {
+      song.pause();
+      musicBtn.textContent = "Play Music";
+    }
+  });
+</script>
+	
+	<script src="script.js"></script>
+	</body>
+</html>
