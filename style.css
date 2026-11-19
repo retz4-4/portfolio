@@ -777,3 +777,63 @@ img {
         padding: 25px 18px;
     }
 }
+
+/* =================================
+   THANK YOU PAGE
+================================= */
+
+.thankyou-page {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px;
+}
+
+.thankyou-card {
+    width: 100%;
+    max-width: 550px;
+    background: white;
+    padding: 55px 35px;
+    border: 1px solid #eee7dc;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.06);
+    animation: fadeIn 0.7s ease both;
+}
+
+.success-icon {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 25px;
+    border-radius: 50%;
+    background: #ffedd5;
+    color: #f97316;
+    font-size: 2.2rem;
+    font-weight: bold;
+}
+
+.thankyou-card h1 {
+    font-size: 2.7rem;
+    margin: 18px 0 12px;
+    color: #1f2937;
+}
+
+.thankyou-card p {
+    max-width: 400px;
+    margin: 0 auto 28px;
+    line-height: 1.8;
+}
+
+@media (max-width: 600px) {
+    .thankyou-card {
+        padding: 40px 22px;
+    }
+
+    .thankyou-card h1 {
+        font-size: 2.2rem;
+    }
+}
